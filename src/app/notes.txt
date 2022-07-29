@@ -1,0 +1,5 @@
+https://www.productboard.com/blog/how-we-implemented-svg-arrows-in-react-the-curvature-2-3/
+https://dragonman225.js.org/curved-arrows.html
+https://medium.com/productboard-engineering/how-we-implemented-svg-arrows-in-react-the-basics-1-3-e469ce070e00
+https://www.beyondjava.net/how-to-connect-html-elements-with-an-arrow-using-svg
+https://github.com/MalekDammak/curved-line-arrow-angular

@@ -1,0 +1,17 @@
+
+.ngx-workspace {
+  display: flex;
+  width: 100%;
+}
+
+app-workflow {
+  display: flex;
+  align-items: stretch;
+  height: 100%;
+  width: 100%;
+}
+
+.mat-drawer {
+  padding: 10px;
+  border-radius: 10px;
+}

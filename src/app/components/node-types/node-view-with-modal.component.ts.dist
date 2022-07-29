@@ -1,0 +1,43 @@
+import {Component, ElementRef, Input, OnInit} from '@angular/core';
+import {WorkflowNode} from "@wf-models/node/node.model";
+import {WorkflowService} from "@wf-services/workflow.service";
+import {NodeViewBaseModel} from "@wf-models/node/node-view-base.model";
+import { FormControl } from '@angular/forms';
+
+@Component({
+  selector: 'node-view-with-modal',
+  template: `
+    <div class="node-box">
+      {{node.id}}
+    <div *ngIf="!editable">
+      {{ctl.value}}
+    </div>
+    <div *ngIf="editable">
+      <input type="text" [formControl]="ctl" />
+    </div>
+    <button (click)="edit()">{{editable ? 'save' : 'edit'}}</button>
+    </div>
+  `,
+  styles: [`
+
+  `]
+})
+export class NodeViewWithModalComponent extends NodeViewBaseModel implements OnInit {
+  editable = false;
+  ctl = new FormControl('');
+  @Input() user: any = {name: 'Haim'};
+  constructor(el: ElementRef) {
+    super(el);
+  }
+
+  ngOnInit(): void {
+
+  }
+
+  edit() {
+    if(this.editable) {
+      this.node.data.inputs['name'] = this.ctl.value;
+    }
+    this.editable = !this.editable;
+  }
+}
